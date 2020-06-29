@@ -1,22 +1,23 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/row'
 import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Login.css";
-function Login() {
+import "./LoginBox.css"
+function LoginBox(props) {
     return (
-        <Container fluid>
-            <Row>
-                <Col><Form className="Login-Form">
+        <Row>
+            <Col>
+                <Form className="Login-Form">
+                <center>
+                    <Image className="Login-Form-logo" src="https://www.egov.go.th/upload/eservice-thumbnail/img_d05cf3858295d7c8df09e3109072a561.png" rounded />
+                </center>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-          </Form.Text>
+                        
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
@@ -24,17 +25,16 @@ function Login() {
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
+                        <Form.Check type="checkbox" label="Remember Me" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" className="LoginBox-submit-button">
                         Submit
-        </Button>
+                </Button>
                 </Form></Col>
-            </Row>
-        </Container>
-
+        </Row>
     )
-}
 
-export default Login
+}
+export default LoginBox;
+
 

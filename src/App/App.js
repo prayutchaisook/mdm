@@ -3,11 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 
 
-import Login from "../pages/Login";
+import Login from "../containers/Login";
 function App() {
   return (
     <div className="App">
-    <Login/>
+     <Login/>
     </div>
   );
 }
